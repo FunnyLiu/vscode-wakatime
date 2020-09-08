@@ -1,3 +1,4 @@
+// 一个简单的cache 类
 export class MemoryStorage {
 
     private memCache: any = {};

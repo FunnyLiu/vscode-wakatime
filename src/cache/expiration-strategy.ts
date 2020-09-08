@@ -13,7 +13,7 @@ interface IOptions {
     isLazy?: boolean;
     isCachedForever?: boolean;
 }
-
+// 一个带过期时间功能的cache类，对普通的cache类包装了一层进行了代理模式，以及promise的封装
 export class ExpirationStrategy {
 
     private readonly storage: MemoryStorage;

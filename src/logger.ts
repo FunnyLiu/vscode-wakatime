@@ -1,5 +1,5 @@
 import { LogLevel } from './constants';
-
+// 一个简单的日志class
 export class Logger {
   private level: LogLevel;
 

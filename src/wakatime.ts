@@ -238,6 +238,7 @@ export class WakaTime {
   private setupEventListeners(): void {
     // subscribe to selection change and editor activation events
     let subscriptions: vscode.Disposable[] = [];
+    // 对几个重要的操作进行拦截监听，核心生命周期
     vscode.window.onDidChangeTextEditorSelection(this.onChange, this, subscriptions);
     vscode.window.onDidChangeActiveTextEditor(this.onChange, this, subscriptions);
     vscode.workspace.onDidSaveTextDocument(this.onSave, this, subscriptions);
@@ -290,7 +291,7 @@ export class WakaTime {
       }
     });
   }
-
+  // 发送心跳请求包
   private _sendHeartbeat(file: string, isWrite: boolean, pythonBinary?: string): void {
     if (this.standalone && !this.dependencies.isStandaloneCliInstalled()) return;
     let cli = this.standalone

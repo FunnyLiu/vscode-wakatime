@@ -1,3 +1,38 @@
+
+# 源码分析
+
+## 文件结构
+
+``` bash
+/Users/liufang/openSource/FunnyLiu/vscode-wakatime
+├── src
+|  ├── cache
+|  |  ├── expiration-strategy.ts - 带过期时间的缓存类
+|  |  └── memory-storage.ts - 最基本的缓存类
+|  ├── constants.ts
+|  ├── dependencies.ts
+|  ├── extension.ts - 入口文件
+|  ├── libs.ts
+|  ├── logger.ts - 日志输出class
+|  ├── options.ts 
+|  └── wakatime.ts
+└── webpack.config.js
+
+directory: 3 file: 24
+
+ignored: directory (1)
+
+```
+
+## 外部模块依赖
+
+![img](./outer.svg)
+
+## 内部模块依赖
+
+![img](./inner.svg)
+  
+
 # WakaTime for Visual Studio Code
 
 [![Build Status](https://travis-ci.com/wakatime/vscode-wakatime.png?branch=master)](https://travis-ci.com/wakatime/vscode-wakatime)
